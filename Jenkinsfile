@@ -49,7 +49,7 @@ pipeline {
             sh "docker rm -f ${IMAGE_NAME}_container || true"
         }
         failure {
-            sh 'curl -s -X POST https://api.telegram.org/bot<8291555588:AAERSsfJ7eCyzE4JRKiHAt1F-zrigDJZvZw>/sendMessage -d chat_id=<chat_id> -d text="CI failed!"'
+            sh 'curl -s -X POST https://api.telegram.org/bot<8291555588:AAERSsfJ7eCyzE4JRKiHAt1F-zrigDJZvZw>/sendMessage -d chat_id=<80683779> -d text="CI failed!"'
         }
     }
 }
