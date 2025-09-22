@@ -3,7 +3,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'ci-nginx-test'
         HOST_PORT = '9889'
-        GIT_REPO = 'https://github.com/<USERNAME>/ci-nginx-demo.git'
+        GIT_REPO = 'https://github.com/3yaco/11_HW-03'
     }
     stages {
         stage('Checkout') {
@@ -49,7 +49,7 @@ pipeline {
             sh "docker rm -f ${IMAGE_NAME}_container || true"
         }
         failure {
-            sh 'curl -s -X POST https://api.telegram.org/bot<token>/sendMessage -d chat_id=<chat_id> -d text="CI failed!"'
+            sh 'curl -s -X POST https://api.telegram.org/bot<8291555588:AAERSsfJ7eCyzE4JRKiHAt1F-zrigDJZvZw>/sendMessage -d chat_id=<chat_id> -d text="CI failed!"'
         }
     }
 }
